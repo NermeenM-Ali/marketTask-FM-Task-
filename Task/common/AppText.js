@@ -23,7 +23,7 @@ const AppText = ({padding, paddingHorizontal, marginTop,alignSelf,numberlines, t
 
 const styles = {
     text: {
-        fontFamily: Platform.OS == 'ios' ? 'Droid Arabic Kufi' : 'droidkufi',
+        //fontFamily: Platform.OS == 'ios' ? 'Droid Arabic Kufi' : 'droidkufi',
         color: "#979797",
         fontSize: 14,
         writingDirection: "rtl",
