@@ -21,7 +21,7 @@ export default class Info extends Component {
             this.swiper3.scrollBy(1)
             this.setState({ScrollEnd: true})
             
-        }, 1000);
+        }, 1500);
       
     }
 
@@ -43,7 +43,7 @@ export default class Info extends Component {
             <View style={{flex:1, backgroundColor:'#FF5C5C'}}>
                 <StatusBar hidden/>
                 <ScrollView  style={{flex:1}}>
-                    <Image source={require('../imgs/fm3.png')} style={{width:WIDTH, height: hp(30), marginTop:hp(5)}}/>
+                    <Image source={require('../imgs/fm.png')} style={{width:wp(90), height: hp(30), marginTop:hp(2), alignSelf:'center', marginLeft:wp(-8)}}/>
                         <Text style={{fontWeight:'400', fontSize:wp(3), color:'white', flexWrap:'wrap', marginHorizontal:wp(2), textAlign:'center'}}>
                             FreshMarket is a mobile platform for fresh groceries, fruits and vegetables.
                             Choose products on our mobile app, and get everything delivered to your doorstep, quickly

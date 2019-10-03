@@ -21,7 +21,7 @@ export default class Splash extends Component {
         return(
             <View style={{flex:1, backgroundColor:'#FF5C5C', justifyContent:'center', alignItems:'center'}}>
                 <StatusBar hidden/>
-                <Image source={require('../imgs/fm3.png')} style={{width:wp(100), height:hp(27)}}/>
+                <Image source={require('../imgs/fm.png')} style={{width:wp(100), height:hp(30), alignSelf:"center", marginLeft:wp(-8)}}/>
                 <Spinner size='large' color='white'>
                     {this.switch()}
                 </Spinner>
