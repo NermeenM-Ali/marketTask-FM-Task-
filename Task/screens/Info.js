@@ -56,7 +56,7 @@ export default class Info extends Component {
                   
                     <View style={{ flexDirection:'row', backgroundColor:'#FF5C5C'}}>
                             <Card style={{elevation:2, backgroundColor:'#F2F3F4', height:hp(50), width:wp(32), borderRadius:wp(3)}}>
-                                    <Swiper style={{flex:1}}
+                                    <Swiper conatinerStyle={{flex:1}}
                                              showsPagination
                                              scrollEnabled
                                              loop={false}
@@ -85,7 +85,7 @@ export default class Info extends Component {
                             </Card>
 
                             <Card style={{elevation:2, backgroundColor:'#F2F3F4', height:hp(50), width:wp(32), borderRadius:wp(3)}}>
-                                    <Swiper style={{flex:1}}
+                                    <Swiper conatinerStyle={{flex:1}}
                                              showsPagination
                                              scrollEnabled
                                              loop={false}
@@ -112,7 +112,7 @@ export default class Info extends Component {
                             </Card>
                             
                             <Card style={{elevation:2, backgroundColor:'#F2F3F4', height:hp(50), width:wp(32), borderRadius:wp(3)}}>
-                                    <Swiper style={{flex:1}}
+                                    <Swiper conatinerStyle={{flex:1}}
                                              showsPagination
                                              scrollEnabled
                                              loop={false}
