@@ -43,9 +43,9 @@ export default class Info extends Component {
             <View style={{flex:1, backgroundColor:'#FF5C5C'}}>
                 <StatusBar hidden/>
                 <ScrollView  style={{flex:1}}>
-                    <Image source={require('../imgs/fm.png')} style={{width:WIDTH, height: hp(30), marginTop:hp(5)}}/>
+                    <Image source={require('../imgs/fm3.png')} style={{width:WIDTH, height: hp(30), marginTop:hp(5)}}/>
                         <Text style={{fontWeight:'400', fontSize:wp(3), color:'white', flexWrap:'wrap', marginHorizontal:wp(2), textAlign:'center'}}>
-                            FreshMarket is a mobile platform for fresh groceries, fruits, vegetables
+                            FreshMarket is a mobile platform for fresh groceries, fruits and vegetables.
                             Choose products on our mobile app, and get everything delivered to your doorstep, quickly
                         </Text>
                     <View style={{backgroundColor:'#FF5C5C', alignSelf:'center', marginVertical:hp(2)}}>

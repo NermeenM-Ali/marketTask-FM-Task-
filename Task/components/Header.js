@@ -22,7 +22,7 @@ export default class Header extends Component {
             <View style={{ ...styles.header, backgroundColor: backColor, flexDirection: this.props.isRtl ? 'row' : 'row-reverse', }}>
                 <StatusBar hidden/>
                
-                <View style={{ marginHorizontal:moderateScale(4), justifyContent:'center',alignItems:'center',flexDirection: this.props.isRtl ? 'row' : 'row-reverse' }} >
+                <View style={{ width:wp(25), justifyContent:'center',alignItems:'center',flexDirection: this.props.isRtl ? 'row' : 'row-reverse' }} >
                    
 
                     {
@@ -40,7 +40,7 @@ export default class Header extends Component {
                     {
                       showCart && rightComponent?
                       <Button transparent >
-                      <Icon name={this.props.isRtl ? "ios-cart" : "ios-cart"} type='Ionicons' style={styles.icon} />
+                      <Icon name={this.props.isRtl ? "cart-outline" : "cart-outline"} type='MaterialCommunityIcons' style={styles.icon} />
                       </Button>
                       :
                       <AppText text=''/>
@@ -60,9 +60,14 @@ export default class Header extends Component {
 
                 </View>
                
-                <View style={{ ...styles.centerContainer, justifyContent: this.props.isRtl ? 'flex-end' : 'flex-start', marginLeft:wp(5),  }}>
+                {
+                  headerText?
+                  <View style={{ ...styles.centerContainer, justifyContent: this.props.isRtl ? 'flex-end' : 'flex-start', marginLeft:wp(5),  }}>
                     <Text style={textStyle}>{headerText}</Text>
                 </View> 
+                :
+                <View style={{width:wp(63)}}></View>
+                }
 
                 <View style={{ ...styles.rightContainer, alignItems: 'center', justifyContent: 'center', flexDirection: this.props.isRtl ? 'row' : 'row-reverse'}}>
                     {
@@ -126,9 +131,9 @@ const styles = StyleSheet.create({
         zIndex: 7000,
       },
     textStyle: {
-        fontSize: wp(4),
+        fontSize: wp(5),
         color:'black',
-        
+        fontWeight:'400'        
         
     },
     centerContainer: {

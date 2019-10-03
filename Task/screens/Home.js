@@ -9,7 +9,7 @@ import { Actions } from 'react-native-router-flux';
 const WIDTH  = Dimensions.get('screen').width 
 const HEIGHT = Dimensions.get('screen').height 
 
-
+const vegetablesImg='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZx-96u6ZHiIll7qRO0-zI6ds1nxCom_ZJH4fW6eAl98bL09n'
 
 export default class Home extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ export default class Home extends Component {
     Swipe=()=> {
         setInterval(()=>{
             this.swiper.scrollBy(1)
-        }, 1000)
+        }, 3000)
     }
 
     componentDidMount() {
@@ -74,38 +74,38 @@ export default class Home extends Component {
                         </Swiper>
                     </View>
                     <View style={{ flex:1, backgroundColor:'white', marginTop: hp(0.5),flexDirection:'row', justifyContent:'center', alignItems:'center' }}>
-                    <TouchableOpacity onPress={()=> Actions.category({data: vegetables.products, img: vegetables.category_img})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
+                    <TouchableOpacity onPress={()=> Actions.category({data: vegetables.products, img: vegetables.category_img, text: vegetables.name})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
                                 <ImageBackground resizeMode='center' source={{uri: vegetables.category_img}} style={{height:hp(30), width:wp(48), justifyContent:'flex-end'}}>
-                                    <Text style={{fontSize:wp(4), marginLeft:hp(2),fontWeight:'500', color:'black'}}>{vegetables.name}</Text> 
+                                    <Text style={{fontSize:wp(4), marginLeft:hp(2),fontWeight:'500', color:'#F2F3F4'}}>{vegetables.name}</Text> 
                                 </ImageBackground>
                        </TouchableOpacity>
 
                        <View style={{width:wp(2), backgroundColor:'white'}}></View>
 
-                       <TouchableOpacity onPress={()=> Actions.category({data: fruits.products, img: fruits.category_img})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
+                       <TouchableOpacity onPress={()=> Actions.category({data: fruits.products, img: fruits.category_img, text: fruits.name})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
                                 <ImageBackground source={{uri: fruits.category_img}} style={{height:hp(30), width:wp(48), justifyContent:'flex-end'}}>
-                                    <Text style={{fontSize:wp(4), marginLeft:hp(2), fontWeight:'500',color:'white'}}>{fruits.name}</Text> 
+                                    <Text style={{fontSize:wp(4), marginLeft:hp(2), fontWeight:'500',color:'#F2F3F4'}}>{fruits.name}</Text> 
                                 </ImageBackground>
                        </TouchableOpacity>
 
                     </View>
 
-                    <View style={{width:WIDTH, height: hp(15), marginVertical:hp(0.5), justifyContent:'center', alignItems:'center'}}>
-                         <Image source={require('../imgs/quote.jpg')} style={{width:wp(96), height: hp(15)}}/>   
+                    <View style={{width:WIDTH, height: hp(15), marginVertical:hp(0.5), alignSelf:'center',}}>
+                         <Image source={require('../imgs/quote.jpg')} style={{width:wp(97), height: hp(15), alignSelf:'center', marginTop:hp(0.5)}}/>   
                     </View>
 
                     <View style={{ flex:1, backgroundColor:'white', marginVertical:hp(0.5),flexDirection:'row', justifyContent:'center', justifyContent:'center' }}>
-                    <TouchableOpacity onPress={()=> Actions.category({data: meats.products, img: meats.category_img})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
+                    <TouchableOpacity onPress={()=> Actions.category({data: meats.products, img: meats.category_img, text: meats.name})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
                                 <ImageBackground source={{uri: meats.category_img}} style={{height:hp(30), width:wp(48), justifyContent:'flex-end'}}>
-                                    <Text style={{fontSize:wp(4), marginLeft:hp(2), fontWeight:'500',color:'white'}}>{meats.name}</Text> 
+                                    <Text style={{fontSize:wp(4), marginLeft:hp(2), fontWeight:'500',color:'#F2F3F4'}}>{meats.name}</Text> 
                                 </ImageBackground>
                        </TouchableOpacity>
 
                         <View style={{width:wp(2), backgroundColor:'white'}}></View>
 
-                        <TouchableOpacity onPress={()=> Actions.category({data: seaFood.products, img: seaFood.category_img})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
+                        <TouchableOpacity onPress={()=> Actions.category({data: seaFood.products, img: seaFood.category_img, text: seaFood.name})} style={{height:hp(30), width:wp(48), borderColor:'lightgray', borderWidth:wp(0.2), elevation:2}}>
                                 <ImageBackground source={{uri: seaFood.category_img}} style={{height:hp(30), width:wp(48), justifyContent:'flex-end'}}>
-                                    <Text style={{fontSize:wp(4), marginLeft:hp(2), fontWeight:'500',color:'white'}}>{seaFood.name}</Text> 
+                                    <Text style={{fontSize:wp(4), marginLeft:hp(2), fontWeight:'500',color:'#F2F3F4'}}>{seaFood.name}</Text> 
                                 </ImageBackground>
                        </TouchableOpacity>
                     </View>

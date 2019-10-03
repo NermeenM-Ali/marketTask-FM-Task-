@@ -48,7 +48,8 @@ export default class Fruits extends Component {
     
     
     render() {
-        console.log(this.props.data)
+        const { img, text, data} = this.props
+        //console.log(this.props.data)
         YellowBox.ignoreWarnings([
             'Warning: componentWillMount is deprecated',
             'Warning: componentWillReceiveProps is deprecated',
@@ -59,14 +60,14 @@ export default class Fruits extends Component {
         return(
             <View style={{flex:1, backgroundColor:'white'}}>
                 <StatusBar hidden/>
-                <ImageBackground source={{uri: this.props.img}} style={{width:WIDTH, height:hp(38), backgroundColor:'white'}}>
-                   <Header backColor='transparent' backAction leftComponent showCart showSearch rightComponent/>
+                <ImageBackground source={{uri: img}} style={{width:WIDTH, height:hp(38), backgroundColor:'white'}}>
+                   <Header backColor='transparent' headerText={text} backAction leftComponent showCart showSearch rightComponent/>
                 </ImageBackground>
                 <ScrollView style={{flex:1,}}>
                     
-                    <View style={{height:hp(100)}}>
+                    <View style={{height:hp(102)}}>
                     <FlatList
-                               data={this.props.data}
+                               data={data}
                                renderItem={(item)=> <RenderRow item={item}/>}
                                keyExtractor={(item)=> item.id} 
                                numColumns={2}

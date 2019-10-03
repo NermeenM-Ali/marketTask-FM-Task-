@@ -9,7 +9,7 @@ export default class Splash extends Component {
     switch=() =>{
         setTimeout(()=>{
             Actions.info()
-        }, 1000)
+        }, 3000)
     }
     render() {
         YellowBox.ignoreWarnings([
@@ -21,7 +21,7 @@ export default class Splash extends Component {
         return(
             <View style={{flex:1, backgroundColor:'#FF5C5C', justifyContent:'center', alignItems:'center'}}>
                 <StatusBar hidden/>
-                <Image source={require('../imgs/fm.png')} style={{width:WIDTH, height:hp(23)}}/>
+                <Image source={require('../imgs/fm3.png')} style={{width:wp(100), height:hp(27)}}/>
                 <Spinner size='large' color='white'>
                     {this.switch()}
                 </Spinner>
